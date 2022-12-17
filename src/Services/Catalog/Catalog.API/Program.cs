@@ -21,6 +21,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+/*docker-compose -f .\docker-compose.yml -f .\docker-compose.override.yml up -d
+docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d*/
+
 app.UseAuthorization();
 
 app.MapControllers();
