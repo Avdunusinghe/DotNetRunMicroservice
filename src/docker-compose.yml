@@ -8,8 +8,14 @@ services:
   basketdb:
     image: redis:alpine
 
+  discountdb:
+    image: postgres
+
   potainer:
     image: portainer/portainer-ce
+
+  pgadmin:
+    image: dpage/pgadmin4
 
   catalog.api:
     image: ${DOCKER_REGISTRY-}catalogapi
@@ -26,4 +32,6 @@ services:
 volumes:
   mongo_data:
   potainer_data:
+  postgres_data:
+  pgadmin_data:
 
